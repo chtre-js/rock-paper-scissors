@@ -15,3 +15,7 @@ function getHumanChoice() {
     choice = prompt('Choose "rock", "paper" or "scissors"').toLowerCase();
     return choice
 }
+
+function playRound(humanChoice, computerChoice) {  // TODO: Use switch(choice) to define result
+    if (humanChoice === "rock")         
+}
