@@ -8,4 +8,7 @@ function getComputerChoice() {
     return "scissors";
 }
 
-console.log(getComputerChoice())
+function getHumanChoice() {
+    choice = prompt('Choose "rock", "paper" or "scissors"').toLowerCase();
+    return choice
+}
