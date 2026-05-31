@@ -68,4 +68,10 @@ function playRound(humanChoice, computerChoice) {
 }
 
 
-function playGame(numberOfRounds) {}
+function playGame(numberOfRounds) {
+    for (numberOfRounds, numberOfRounds > 0, numberOfRounds -= 1) {
+        playRound(getHumanChoice(), getComputerChoice());
+    }
+}
+
+playGame(prompt("How many rounds do you want to play ? "))
