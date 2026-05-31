@@ -73,6 +73,13 @@ function playGame(numberOfRounds) {
         playRound(getHumanChoice(), getComputerChoice());
         console.log(`COMPUTER = ${computerScore} \nHUMAN = ${humanScore}`);
     }
+    if (humanScore > computerScore) {
+        console.log("YOU WIN THE GAME! WELL DONE!");
+    } else if (humanScore < computerScore) {
+        console.log("YOU LOSE THE GAME! TRY AGAIN!");
+    } else {
+        console.log("DRAW")
+    }
 }
 
 playGame(prompt("How many rounds do you want to play ? "))
