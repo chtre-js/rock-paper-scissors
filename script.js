@@ -71,6 +71,7 @@ function playRound(humanChoice, computerChoice) {
 function playGame(numberOfRounds) {
     for (numberOfRounds; numberOfRounds > 0; numberOfRounds -= 1 ) {
         playRound(getHumanChoice(), getComputerChoice());
+        console.log(`COMPUTER = ${computerScore} \nHUMAN = ${humanScore}`);
     }
 }
 
