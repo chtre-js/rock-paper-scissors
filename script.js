@@ -20,6 +20,8 @@ function playRound(humanChoice, computerChoice) {
   const lossStr = "You lose!";
   const winStr = "You win!";
   const drawStr = "It's a draw!";
+  humanChoice = getHumanChoice();
+  computerChoice = getComputerChoice();
 
   if (humanChoice === "rock") {
     switch (computerChoice) {
