@@ -33,6 +33,7 @@ function playRound(humanChoice, computerChoice) {
       case "scissors":
         console.log(`${winStr} Rock beats scissors!`);
         ++humanScore;
+        break;
     }
   } else if (humanChoice === "paper") {
     switch (computerChoice) {
@@ -46,6 +47,7 @@ function playRound(humanChoice, computerChoice) {
       case "rock":
         console.log(`${winStr} Paper beats rock!`);
         ++humanScore;
+        break;
     }
   } else {
     // humanchoice === "scissors"
@@ -60,6 +62,7 @@ function playRound(humanChoice, computerChoice) {
       case "paper":
         console.log(`${winStr} Scissors beat paper!`);
         ++humanScore;
+        break;
     }
   }
 }
