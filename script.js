@@ -11,17 +11,17 @@ function getComputerChoice() {
   return "scissors";
 }
 
-function getHumanChoice() {
-  choice = prompt('Choose "rock", "paper" or "scissors"').toLowerCase();
-  return choice;
-}
+// function getHumanChoice() {
+//   choice = prompt('Choose "rock", "paper" or "scissors"').toLowerCase();
+//   return choice;
+// }
 
 function playRound(humanChoice, computerChoice) {
   const lossStr = "You lose!";
   const winStr = "You win!";
   const drawStr = "It's a draw!";
 
-  if (humanChoice === "rock") {
+  if (humanChoice === "rock") { // TODO: Change "console.log"s
     switch (computerChoice) {
       case "rock":
         console.log(drawStr);
@@ -68,18 +68,29 @@ function playRound(humanChoice, computerChoice) {
 }
 
 
-function playGame(numberOfRounds) {
-    for (numberOfRounds; numberOfRounds > 0; numberOfRounds -= 1 ) {
-        playRound(getHumanChoice(), getComputerChoice());
-        console.log(`COMPUTER = ${computerScore} \nHUMAN = ${humanScore}`);
-    }
-    if (humanScore > computerScore) {
-        console.log("YOU WIN THE GAME! WELL DONE!");
-    } else if (humanScore < computerScore) {
-        console.log("YOU LOSE THE GAME! TRY AGAIN!");
-    } else {
-        console.log("DRAW")
-    }
-}
+    // if (humanScore > computerScore) {
+    //     console.log("YOU WIN THE GAME! WELL DONE!");
+    // } else if (humanScore < computerScore) {
+    //     console.log("YOU LOSE THE GAME! TRY AGAIN!");
+    // } else {
+    //     console.log("DRAW")
+    // }
 
-playGame(prompt("How many rounds do you want to play ? "))
+const btnContainer = document.querySelector("#btnContainer");
+let input = "";
+
+btnContainer.addEventListener("click", (event) => {
+  let target = event.target;
+
+  switch(target.id) {
+    case "rock":
+      playRound("rock", getComputerChoice());
+      break;
+    case "paper":
+      playRound("paper", getComputerChoice());
+      break;
+    case "scissors":
+      playRound("scissors", getComputerChoice());
+      break;
+  }
+});
