@@ -1,6 +1,7 @@
 const computerScoreDisplay = document.querySelector("#computerScoreDisplay");
 const humanScoreDisplay = document.querySelector("#humanScoreDisplay");
 const resultDisplay = document.querySelector("#resultDisplay");
+const winnerDisplay = document.querySelector("#winnerDisplay");
 
 let humanScore = 0;
 let computerScore = 0;
@@ -68,14 +69,6 @@ function playRound(humanChoice, computerChoice) {
 }
 
 
-    // if (humanScore > computerScore) {
-    //     console.log("YOU WIN THE GAME! WELL DONE!");
-    // } else if (humanScore < computerScore) {
-    //     console.log("YOU LOSE THE GAME! TRY AGAIN!");
-    // } else {
-    //     console.log("DRAW")
-    // }
-
 function handlePlayerChoice() {
   const btnContainer = document.querySelector("#btnContainer");
 
@@ -96,6 +89,16 @@ function handlePlayerChoice() {
 
     humanScoreDisplay.textContent = `Human : ${humanScore}`;
     computerScoreDisplay.textContent = `Computer : ${computerScore}`;
+
+    if (humanScore === 5 || computerScore === 5) {
+      if (humanScore > computerScore) {
+          winnerDisplay.textContent = "YOU WON THE GAME! WELL DONE!";
+      } else if (humanScore < computerScore) {
+          winnerDisplay.textContent = "YOU LOST THE GAME! TRY AGAIN!";
+      } else {
+          winnerDisplay.textContent = "DRAW";
+      }
+    }
   });
 }
 
