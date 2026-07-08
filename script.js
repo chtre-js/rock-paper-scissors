@@ -24,28 +24,28 @@ function playRound(humanChoice, computerChoice) {
   if (humanChoice === "rock") {
     switch (computerChoice) {
       case "rock":
-        console.log(drawStr);
+        resultDisplay.textContent = drawStr;
         break;
       case "paper":
-        console.log(`${lossStr} Paper beats rock!`);
+        resultDisplay.textContent = lossStr;
         ++computerScore;
         break;
       case "scissors":
-        console.log(`${winStr} Rock beats scissors!`);
+        resultDisplay.textContent = winStr;
         ++humanScore;
         break;
     }
   } else if (humanChoice === "paper") {
     switch (computerChoice) {
       case "paper":
-        console.log(drawStr);
+        resultDisplay.textContent = drawStr;
         break;
       case "scissors":
-        console.log(`${lossStr} Scissors beat paper!`);
+        resultDisplay.textContent = lossStr;
         ++computerScore;
         break;
       case "rock":
-        console.log(`${winStr} Paper beats rock!`);
+        resultDisplay.textContent = winStr;
         ++humanScore;
         break;
     }
@@ -53,14 +53,14 @@ function playRound(humanChoice, computerChoice) {
     // humanchoice === "scissors"
     switch (computerChoice) {
       case "scissors":
-        console.log(drawStr);
+        resultDisplay.textContent = drawStr;
         break;
       case "rock":
-        console.log(`${lossStr} Rock beats scissors!`);
+        resultDisplay.textContent = lossStr;
         ++computerScore;
         break;
       case "paper":
-        console.log(`${winStr} Scissors beat paper!`);
+        resultDisplay.textContent = winStr;
         ++humanScore;
         break;
     }
