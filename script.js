@@ -1,3 +1,7 @@
+const computerScoreDisplay = document.querySelector("#computerScoreDisplay");
+const humanScoreDisplay = document.querySelector("#humanScoreDisplay");
+const resultDisplay = document.querySelector("#resultDisplay");
+
 let humanScore = 0;
 let computerScore = 0;
 
@@ -11,17 +15,13 @@ function getComputerChoice() {
   return "scissors";
 }
 
-// function getHumanChoice() {
-//   choice = prompt('Choose "rock", "paper" or "scissors"').toLowerCase();
-//   return choice;
-// }
 
 function playRound(humanChoice, computerChoice) {
   const lossStr = "You lose!";
   const winStr = "You win!";
   const drawStr = "It's a draw!";
 
-  if (humanChoice === "rock") { // TODO: Change "console.log"s
+  if (humanChoice === "rock") {
     switch (computerChoice) {
       case "rock":
         console.log(drawStr);
