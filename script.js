@@ -93,5 +93,10 @@ function handlePlayerChoice() {
         playRound("scissors", getComputerChoice());
         break;
     }
+
+    humanScoreDisplay.textContent = `Human : ${humanScore}`;
+    computerScoreDisplay.textContent = `Computer : ${computerScore}`;
   });
 }
+
+handlePlayerChoice();
