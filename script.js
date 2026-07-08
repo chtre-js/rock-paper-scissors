@@ -76,7 +76,7 @@ function playRound(humanChoice, computerChoice) {
     //     console.log("DRAW")
     // }
 
-function getHumanChoice() {
+function handlePlayerChoice() {
   const btnContainer = document.querySelector("#btnContainer");
 
   btnContainer.addEventListener("click", (event) => {
@@ -95,4 +95,3 @@ function getHumanChoice() {
     }
   });
 }
-  
