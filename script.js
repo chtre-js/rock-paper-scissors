@@ -1,3 +1,4 @@
+const resultContainer = document.querySelector("#resultContainer");
 const computerScoreDisplay = document.querySelector("#computerScoreDisplay");
 const humanScoreDisplay = document.querySelector("#humanScoreDisplay");
 const resultDisplay = document.querySelector("#resultDisplay");
@@ -98,6 +99,8 @@ function handlePlayerChoice() {
       } else {
           winnerDisplay.textContent = "DRAW";
       }
+
+      resultContainer.remove();
     }
   });
 }
