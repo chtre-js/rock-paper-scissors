@@ -76,21 +76,23 @@ function playRound(humanChoice, computerChoice) {
     //     console.log("DRAW")
     // }
 
-const btnContainer = document.querySelector("#btnContainer");
-let input = "";
+function getHumanChoice() {
+  const btnContainer = document.querySelector("#btnContainer");
 
-btnContainer.addEventListener("click", (event) => {
-  let target = event.target;
+  btnContainer.addEventListener("click", (event) => {
+    let target = event.target;
 
-  switch(target.id) {
-    case "rock":
-      playRound("rock", getComputerChoice());
-      break;
-    case "paper":
-      playRound("paper", getComputerChoice());
-      break;
-    case "scissors":
-      playRound("scissors", getComputerChoice());
-      break;
-  }
-});
+    switch(target.id) {
+      case "rock":
+        playRound("rock", getComputerChoice());
+        break;
+      case "paper":
+        playRound("paper", getComputerChoice());
+        break;
+      case "scissors":
+        playRound("scissors", getComputerChoice());
+        break;
+    }
+  });
+}
+  
